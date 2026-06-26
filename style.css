@@ -1,0 +1,36 @@
+h1{
+    color: rgb(141, 50, 55);
+    text-align: center;
+    font-weight: bold;
+    border: 4px solid rgb(141, 50, 55);
+    background-color: rgb(216, 215, 215);
+}
+
+.secciones{
+    
+    justify-content: center;
+    gap: 20px;
+    border: 4px solid rgb(141, 50, 55);
+    width: 100%;
+    height:75vh;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.contenedor{
+    display: flex;
+     flex-direction: row;
+  gap: 10px;
+}
+
+.contenido{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid rgb(141, 50, 55);
+    width: 99%;
+    height: 95%;
+    background-color: rgb(219, 211, 136);
+}
