@@ -49,6 +49,11 @@ h1{
     color: white;
 }
 
+#btnGuardarNota:hover{
+background-color: rgb(48, 134, 44);
+transition: background-color 0.3s ease;
+}
+
 .secciones h2{
    margin: 0;
 }
