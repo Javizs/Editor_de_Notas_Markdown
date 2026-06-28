@@ -71,3 +71,36 @@ transition: background-color 0.3s ease;
   width: fit-content;
 
 }
+h3{
+    margin: 0;
+    white-space: nowrap;
+}
+.secciones-notas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+#editorNotasNombre {
+    flex: 1;
+    height: 60px;
+    background-color: #ded98b;
+    border: 4px solid #8b2635;
+    padding: 15px;
+    font-size: 18px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+#editorNotas {
+    width: 100%;
+    height: 560px;
+    background-color: #ded98b;
+    border: 4px solid #8b2635;
+    padding: 15px;
+    font-size: 18px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
