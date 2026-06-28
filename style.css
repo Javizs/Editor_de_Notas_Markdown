@@ -1,106 +1,123 @@
-h1{
-    color: rgb(141, 50, 55);
-    text-align: center;
-    font-weight: bold;
-    border: 4px solid rgb(141, 50, 55);
-    background-color: rgb(216, 215, 215);
+:root {
+    --accent: #8b2635;
+    --accent-dark: #6f1f2a;
+    --surface: #f7f2df;
+    --surface-2: #efe6b5;
+    --text: #4b2d31;
+    --green: #5fa86f;
+    --green-dark: #4d8a5b;
 }
 
-.secciones{
-    
+h1 {
+    color: var(--accent);
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid var(--accent);
+    background-color: var(--surface);
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.secciones {
     justify-content: center;
     gap: 20px;
-    border: 4px solid rgb(141, 50, 55);
+    border: 2px solid var(--accent);
     width: 100%;
-    height:75vh;
-    padding: 5px;
+    height: 75vh;
+    padding: 8px;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
-}
-.contenedor{
-    display: flex;
-     flex-direction: row;
-  gap: 10px;
+    background-color: var(--surface);
+    border-radius: 8px;
 }
 
-.contenido{
+.contenedor {
     display: flex;
-    flex-direction:column;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 4px solid rgb(141, 50, 55);
+    border: 2px solid var(--accent);
     width: 99%;
     height: 90%;
-    background-color: rgb(219, 211, 136);
+    background-color: #e4d98f;
+    border-radius: 8px;
 }
 
-.btn{
-
+.btn {
     padding: 10px;
-    border: 2px solid;
+    border: 1px solid var(--accent);
     border-radius: 5px;
+    background-color: var(--surface);
+    color: var(--text);
 }
 
-#btnGuardarNota{
+#btnGuardarNota {
     padding: 10px;
-    background-color: rgb(93, 209, 128);
+    background-color: var(--green);
+    border: 1px solid var(--green-dark);
     border-radius: 5px;
     color: white;
 }
 
-#btnGuardarNota:hover{
-background-color: rgb(48, 134, 44);
-transition: background-color 0.3s ease;
+#btnGuardarNota:hover {
+    background-color: var(--green-dark);
+    transition: background-color 0.3s ease;
 }
 
-.secciones h2{
-   margin: 0;
-}
-.secciones-editor{
-     display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.secciones-notas{
-     display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  width: fit-content;
-
-}
-h3{
+.secciones h2 {
     margin: 0;
-    white-space: nowrap;
 }
-.secciones-notas{
+
+.secciones-editor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.secciones-notas {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     width: 100%;
 }
+
+h3 {
+    margin: 0;
+    white-space: nowrap;
+    color: var(--accent-dark);
+}
+
 #editorNotasNombre {
     flex: 1;
     height: 60px;
-    background-color: #ded98b;
-    border: 4px solid #8b2635;
+    background-color: var(--surface-2);
+    border: 2px solid var(--accent);
     padding: 15px;
     font-size: 18px;
     resize: none;
     outline: none;
     box-sizing: border-box;
+    border-radius: 6px;
 }
+
 #editorNotas {
     width: 100%;
     height: 560px;
-    background-color: #ded98b;
-    border: 4px solid #8b2635;
+    background-color: var(--surface-2);
+    border: 2px solid var(--accent);
     padding: 15px;
     font-size: 18px;
     resize: none;
     outline: none;
     box-sizing: border-box;
+    border-radius: 6px;
 }
