@@ -3,6 +3,7 @@ const textoNota = document.querySelector("#editorNotas");
 const btnGuardarNota = document.querySelector("#btnGuardarNota");
 const btnNuevaNota = document.querySelector("#btnNuevaNota");
 const btnEliminarNota = document.querySelector("#btnEliminarNota");
+const btnExportarNota = document.querySelector("#btnExportarNota");
 const previewMarkdown = document.querySelector("#previewMarkdown");
 notaSeleccionadaId = null;
 
@@ -116,3 +117,32 @@ btnEliminarNota.addEventListener("click", () => {
         mostrarPreviewMarkdown();
     })
     mostrarNotas();
+//BtnExportarNota
+
+    btnExportarNota.addEventListener("click", () =>{
+        const titulo = tituloNota.value.trim();
+        const texto = textoNota.value.trim();
+
+        if (titulo === "" || texto ==="") { 
+
+            alert ("No hay ninguna nota para exportar");
+            return;
+        }
+
+        const archivoMarkdown = new Blob([texto],{
+            type: "text/markdown"
+        });
+
+        const url = URL.createObjectURL(archivoMarkdown);
+
+        const enlaceDescarga = document.createElement("a");
+
+        enlaceDescarga.href = url;
+        enlaceDescarga.download = `${titulo}.md`;
+        enlaceDescarga.click();
+
+        URL.revokeObjectURL(url);
+
+
+
+    });
