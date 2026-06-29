@@ -8,7 +8,7 @@
     --green-dark: #4d8a5b;
 }
 
-h1 {
+.titulo  {
     color: var(--accent);
     text-align: center;
     font-weight: bold;
@@ -48,6 +48,20 @@ h1 {
     height: 90%;
     background-color: #e4d98f;
     border-radius: 8px;
+}
+.contenido-markdown {
+     display: block;
+    border: 2px solid var(--accent);
+    width: 99%;
+    height: 90%;
+    background-color: #e4d98f;
+    border-radius: 8px;
+    text-align: left;
+    font-weight: normal;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .btn {
@@ -120,4 +134,12 @@ h3 {
     outline: none;
     box-sizing: border-box;
     border-radius: 6px;
+}
+
+#previewMarkdown {
+    font-weight: normal;
+    text-align: left;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
 }

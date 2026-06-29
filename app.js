@@ -3,7 +3,8 @@ const textoNota = document.querySelector("#editorNotas");
 const btnGuardarNota = document.querySelector("#btnGuardarNota");
 const btnNuevaNota = document.querySelector("#btnNuevaNota");
 const btnEliminarNota = document.querySelector("#btnEliminarNota");
-let notaSeleccionadaId =null;
+const previewMarkdown = document.querySelector("#previewMarkdown");
+notaSeleccionadaId = null;
 
 btnGuardarNota.addEventListener("click",() => {
 
@@ -57,13 +58,19 @@ function mostrarNotas(){
         const titulo = document.createElement("h3");
         titulo.textContent = nota.titulo;
         recuadroNota.appendChild(titulo);
-        listaNotas.appendChild(recuadroNota);
 
         recuadroNota.addEventListener("click",() =>{
             tituloNota.value = nota.titulo;
             textoNota.value = nota.texto;
             notaSeleccionadaId = nota.id;
+              
+            
+            mostrarPreviewMarkdown();
+
         });
+         //Actualización cuando seleccionamos nota 
+
+
         listaNotas.appendChild(recuadroNota);
     });
 
@@ -75,6 +82,7 @@ function mostrarNotas(){
         tituloNota.value = "";
         textoNota.value = "";
         notaSeleccionadaId = null;
+            previewMarkdown.innerHTML = "";
     })
 
 //BOTON ELIMINAR NOTA 
@@ -90,8 +98,21 @@ btnEliminarNota.addEventListener("click", () => {
     localStorage.setItem ("notas",JSON.stringify(NotasFiltradas));
     tituloNota.value ="";
     textoNota.value = "";
-    notaSeleccionadaId.value = null;
-
+    notaSeleccionadaId = null;
+    previewMarkdown.innerHTML = "";
     mostrarNotas();
     alert("Nota eliminada correctamente"); 
 });
+
+//Markdown con librería Marked.js
+ function mostrarPreviewMarkdown(){
+    const texto = textoNota.value;
+
+    previewMarkdown.innerHTML = marked.parse(texto);
+
+   
+ }
+ textoNota.addEventListener("input",() =>{ //Actualizacion en tiempo real de escritura
+        mostrarPreviewMarkdown();
+    })
+    mostrarNotas();

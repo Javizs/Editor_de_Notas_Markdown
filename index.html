@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-            <h1>Editor de notas Markdown</h1>
+            <h1 class=titulo>Editor de notas Markdown</h1>
 
     <div class="contenedor">
         <div class="secciones" >
@@ -39,9 +39,11 @@
      <!-- -------------------------------------------------------------- -->
         <div class="secciones">
             <h2>Notas preview</h2>
-            <div class="contenido"></div>
+            <div class="contenido-markdown" id="previewMarkdown"></div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <script src="app.js"></script>
 </body>
 </html>
