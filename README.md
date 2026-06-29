@@ -3,7 +3,7 @@
 Editor de notas Markdown desarrollado con HTML, CSS y JavaScript puro.  
 El proyecto permite crear, guardar, editar, eliminar, previsualizar y exportar notas escritas en formato Markdown.
 
-![Vista del editor](img/editordeNotasMarkdown.png)
+![Vista del editor](img/editordenotasMarkdown.png)
 
 ## Descripción
 
